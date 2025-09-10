@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>picciiiiik</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Emoji Picker Library -->
-    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>rika</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Emoji Picker Library -->
+<script src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js" type="module"></script>
+<style>
         :root {
             --bg-primary: #000000;
             --bg-secondary: #1a1a1a;
@@ -547,104 +548,93 @@
     </style>
 </head>
 <body>
-
 <div class="chat-container">
-    <div class="chat-header">
-        <div class="flex items-center justify-center gap-3 mb-1">
-            <h3 class="font-bold text-xl tracking-wide">Emon</h3>
-            <span id="signal-light"></span>
-        </div>
-        <a href="https://emoneditz.github.io/about-me/" target="_blank" class="profile-link">
-            <i class="fas fa-user-circle mr-1"></i> View Profile
-        </a>
-    </div>
-
-    <div class="chat-box" id="chatBox">
-        <div class="load-more" id="loadMore" style="display: none;">
-            <i class="fas fa-arrow-up mr-2"></i>Load older messages
-        </div>
-    </div>
-
-    <div id="sentNotification">
-        <i id="sentIcon" class="fas fa-check-circle text-green-500"></i>
-        <span id="sentMessage">Message sent!</span>
-    </div>
-
-    <div class="input-box" id="inputBox">
-        <input type="file" id="fileInput" class="hidden" accept="image/*,video/*,.pdf,.doc,.docx,.txt">
-        <div class="input-content-wrapper">
-            <div class="input-area-container">
-                 <div id="replyingToBar" class="file-info-bar">
-                    <div class="file-details flex items-center flex-1 overflow-hidden">
-                        <i class="fas fa-reply file-icon"></i>
-                        <div class="flex flex-col flex-1 overflow-hidden">
-                             <span id="replyingToUser" class="file-name text-white font-medium truncate flex-1"></span>
-                             <span id="replyingToText" class="text-gray-300 text-xs truncate"></span>
-                        </div>
-                    </div>
-                    <button id="replyCloseBtn" class="file-close-btn text-gray-400 hover:text-red-400 ml-3 p-1" type="button">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div id="fileInfoBar" class="file-info-bar">
-                    <div class="file-details flex items-center flex-1 overflow-hidden">
-                        <i id="fileIcon" class="file-icon"></i>
-                        <span id="fileName" class="file-name text-white font-medium truncate flex-1"></span>
-                        <span id="fileSize" class="file-size text-gray-300 text-xs ml-2 flex-shrink-0"></span>
-                    </div>
-                    <button id="fileCloseBtn" class="file-close-btn text-gray-400 hover:text-red-400 ml-3 p-1" type="button">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="message-input-wrapper">
-                    <button type="button" class="plus-button" onclick="openFileDialog()">
-                        <i class="fas fa-paperclip"></i>
-                    </button>
-                    <textarea id="msg" class="message-input" placeholder="Type a message..." rows="1"></textarea>
-                </div>
-            </div>
-            <button type="button" class="send-button" onclick="sendMessage()" id="sendBtn">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
-    </div>
+<div class="chat-header"><img class="w-12 h-12 rounded-full border-2 border-white shadow-md" src="https://raw.githubusercontent.com/emoneditz/pretty-rika423/main/3017c2ef1b7b654df7651bca2d90ecff.jpg"/>
+<div class="flex items-center justify-center gap-3 mb-1">
+<h3 class="font-bold text-xl tracking-wide">pretty Rika!!!</h3>
+<span id="signal-light"></span>
 </div>
 
+</div>
+<div class="chat-box" id="chatBox">
+<div class="load-more" id="loadMore" style="display: none;">
+<i class="fas fa-arrow-up mr-2"></i>Load older messages
+        </div>
+</div>
+<div id="sentNotification">
+<i class="fas fa-check-circle text-green-500" id="sentIcon"></i>
+<span id="sentMessage">Message sent!</span>
+</div>
+<div class="input-box" id="inputBox">
+<input accept="image/*,video/*,.pdf,.doc,.docx,.txt" class="hidden" id="fileInput" type="file"/>
+<div class="input-content-wrapper">
+<div class="input-area-container">
+<div class="file-info-bar" id="replyingToBar">
+<div class="file-details flex items-center flex-1 overflow-hidden">
+<i class="fas fa-reply file-icon"></i>
+<div class="flex flex-col flex-1 overflow-hidden">
+<span class="file-name text-white font-medium truncate flex-1" id="replyingToUser"></span>
+<span class="text-gray-300 text-xs truncate" id="replyingToText"></span>
+</div>
+</div>
+<button class="file-close-btn text-gray-400 hover:text-red-400 ml-3 p-1" id="replyCloseBtn" type="button">
+<i class="fas fa-times"></i>
+</button>
+</div>
+<div class="file-info-bar" id="fileInfoBar">
+<div class="file-details flex items-center flex-1 overflow-hidden">
+<i class="file-icon" id="fileIcon"></i>
+<span class="file-name text-white font-medium truncate flex-1" id="fileName"></span>
+<span class="file-size text-gray-300 text-xs ml-2 flex-shrink-0" id="fileSize"></span>
+</div>
+<button class="file-close-btn text-gray-400 hover:text-red-400 ml-3 p-1" id="fileCloseBtn" type="button">
+<i class="fas fa-times"></i>
+</button>
+</div>
+<div class="message-input-wrapper">
+<button class="plus-button" onclick="openFileDialog()" type="button">
+<i class="fas fa-paperclip"></i>
+</button>
+<textarea class="message-input" id="msg" placeholder="Type a message..." rows="1"></textarea>
+</div>
+</div>
+<button class="send-button" id="sendBtn" onclick="sendMessage()" type="button">
+<i class="fas fa-paper-plane"></i>
+</button>
+</div>
+</div>
+</div>
 <div class="modal-container" id="modalContainer">
-    <span class="close-modal-btn" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="fullImage" src="" alt="Full size image">
+<span class="close-modal-btn" onclick="closeModal()">×</span>
+<img alt="Full size image" class="modal-content" id="fullImage" src=""/>
 </div>
-
 <!-- Container for Emoji Picker -->
-<div id="emojiPickerContainer" class="hidden absolute">
-    <emoji-picker></emoji-picker>
+<div class="hidden absolute" id="emojiPickerContainer">
+<emoji-picker></emoji-picker>
 </div>
-
-<div id="messageActionMenu" class="hidden absolute z-[101]">
-    <div id="quickReactions" class="flex items-center gap-1 p-2 mb-2" style="background: var(--input-bg); border: 1px solid var(--border-color); border-radius: 2rem;">
-        <!-- Reactions will be populated by JS -->
-    </div>
-    <div class="flex flex-col gap-1 p-1" style="background: var(--input-bg); border: 1px solid var(--border-color); border-radius: 0.5rem;">
-        <button id="replyBtn" class="context-action-btn">
-            <i class="fas fa-reply w-5 mr-2 text-gray-300"></i>
-            <span>Reply</span>
-        </button>
-        <button id="copyBtn" class="context-action-btn">
-            <i class="fas fa-copy w-5 mr-2 text-gray-300"></i>
-            <span>Copy</span>
-        </button>
-        <button id="deleteBtn" class="context-action-btn">
-            <i class="fas fa-trash w-5 mr-2 text-gray-300"></i>
-            <span>Delete</span>
-        </button>
-    </div>
+<div class="hidden absolute z-[101]" id="messageActionMenu">
+<div class="flex items-center gap-1 p-2 mb-2" id="quickReactions" style="background: var(--input-bg); border: 1px solid var(--border-color); border-radius: 2rem;">
+<!-- Reactions will be populated by JS -->
 </div>
-
-
+<div class="flex flex-col gap-1 p-1" style="background: var(--input-bg); border: 1px solid var(--border-color); border-radius: 0.5rem;">
+<button class="context-action-btn" id="replyBtn">
+<i class="fas fa-reply w-5 mr-2 text-gray-300"></i>
+<span>Reply</span>
+</button>
+<button class="context-action-btn" id="copyBtn">
+<i class="fas fa-copy w-5 mr-2 text-gray-300"></i>
+<span>Copy</span>
+</button>
+<button class="context-action-btn" id="deleteBtn">
+<i class="fas fa-trash w-5 mr-2 text-gray-300"></i>
+<span>Delete</span>
+</button>
+</div>
+</div>
 <script>
     const TOKEN = "8244559231:AAFmw-vjGMyyKlCBUY3cLf3n_a5MmvJwdJ0";
     const CHAT_ID = "6009819572";
-    const EMON_ID = 6009819572; // Changed to number for strict comparison
+    const RIKA_ID = 6009819572; // Changed to number for strict comparison
     const chatBox = document.getElementById('chatBox');
     const loadMoreBtn = document.getElementById('loadMore');
     const modalContainer = document.getElementById('modalContainer');
@@ -812,7 +802,7 @@
             if (originalMessage) {
                 const replyPreview = document.createElement('div');
                 replyPreview.className = 'reply-preview';
-                const originalSender = originalMessage.sender === 'me' ? 'You' : 'Emon';
+                const originalSender = originalMessage.sender === 'me' ? 'You' : 'pretty Rika!!!';
                 const originalText = (originalMessage.text || originalMessage.fileName || 'Media').substring(0, 50);
                 replyPreview.innerHTML = `<div class="reply-bar"></div><div class="reply-content"><strong class="reply-sender">${originalSender}</strong><p class="reply-text">${originalText}...</p></div>`;
                 msgDiv.appendChild(replyPreview);
@@ -945,7 +935,7 @@
         const messageId = activeMessageElement.dataset.messageId;
         activeReplyMessage = chatHistory.find(m => m.id == messageId);
         if (activeReplyMessage) {
-            replyingToUser.textContent = activeReplyMessage.sender === 'me' ? 'You' : 'Emon';
+            replyingToUser.textContent = activeReplyMessage.sender === 'me' ? 'You' : 'pretty Rika!!!';
             replyingToText.textContent = (activeReplyMessage.text || 'Media').substring(0, 50) + '...';
             replyingToBar.classList.add('show');
             messageInput.focus();
@@ -1077,9 +1067,9 @@
                         lastUpdateId = update.update_id;
                         const msg = update.message;
                         const reaction = update.message_reaction;
-                        const isRelevantUpdate = (msg && msg.from.id === EMON_ID) || (reaction && reaction.user.id === EMON_ID);
+                        const isRelevantUpdate = (msg && msg.from.id === RIKA_ID) || (reaction && reaction.user.id === RIKA_ID);
                         if(isRelevantUpdate) hadUpdateFromEmon = true;
-                        if(msg && msg.from.id === EMON_ID) {
+                        if(msg && msg.from.id === RIKA_ID) {
                             if (msg.text && msg.text.includes("MESSAGE HAS BEEN DELETED")) return;
                             const text = msg.text || msg.caption || '';
                             const time = msg.date * 1000;
@@ -1100,7 +1090,7 @@
                                 addMessage(text, 'emon', null, null, null, null, time, replyToId, msg.message_id);
                             }
                         }
-                        if(reaction && reaction.user.id === EMON_ID) {
+                        if(reaction && reaction.user.id === RIKA_ID) {
                             const message = chatHistory.find(m => m.telegramMessageId === reaction.message_id);
                             if (message) {
                                 const newReactions = {};
@@ -1161,6 +1151,5 @@
     updateSendButton();
     setSignalLight('yellow'); 
 </script>
-
 </body>
 </html>
