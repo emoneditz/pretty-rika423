@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for Rumaisa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .message {
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .message p {
+            margin-bottom: 20px;
+        }
+
+        .button-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .action-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 15px 0 rgba(255, 107, 107, 0.3);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px 0 rgba(255, 107, 107, 0.4);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            animation: slideIn 0.3s ease;
+            color: white;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close:hover {
+            opacity: 0.7;
+        }
+
+        .modal h2 {
+            margin: 20px 0;
+            color: #ffd93d;
+        }
+
+        .modal p {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .modal button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .modal button:hover {
+            transform: translateY(-2px);
+        }
+
+        .link-button {
+            background: linear-gradient(45deg, #ffd93d, #ff6b6b);
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px 0 rgba(255, 217, 61, 0.3);
+        }
+
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px 0 rgba(255, 217, 61, 0.4);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .message {
+                font-size: 14px;
+            }
+            
+            .action-btn {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <p>picci..</p>
+
+            <p>I see you’ve been having some trouble talking with me 😅. You don’t need to worry about it anymore. My site is completely broken for some reason, and honestly, I don’t want to fix it right now since I’m on vacation at my step-grandmother’s home. If I were to fix it, I’d need to buy a subscription for around 6–7K BDT for the server; otherwise, it won’t be available. But if there’s a way to fix it without that, I definitely will. It’s really good to see that you don’t have to worry about your mom finding out who Emon is...</p>
+
+            <p>That’s pretty much it. Last but not least, if I’ve ever done anything wrong, my deepest apologies for that. I hope you have a wonderful future... 🔮</p>
+<h1>[Edited] </h1>
+            <p>Maybe I’ve already found a way... :</p>
+        </div>
+
+        <div class="button-section">
+            <button class="action-btn" onclick="showByePopup()">bye bye..</button>
+            <button class="action-btn" onclick="showWasteTimePopup()">waste your time</button>
+        </div>
+    </div>
+
+    <!-- Bye Bye Modal -->
+    <div id="byeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('byeModal')">&times;</span>
+            <h2>dimu kaner nise</h2>
+            <p>😑</p>
+            <button onclick="closeModal('byeModal')">Okay</button>
+        </div>
+    </div>
+
+    <!-- Waste Time Modal -->
+    <div id="wasteTimeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('wasteTimeModal')">&times;</span>
+            <h2>haha I find out a way to fixed it😇</h2>
+            <p>abar eto poros? 😐</p>
+            <a href="https://pretty-rika42.vercel.app/" target="_blank" class="link-button">Click Here</a>
+            <br><br>
+            <button onclick="closeModal('wasteTimeModal')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showByePopup() {
+            document.getElementById('byeModal').style.display = 'block';
+        }
+
+        function showWasteTimePopup() {
+            document.getElementById('wasteTimeModal').style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const byeModal = document.getElementById('byeModal');
+            const wasteTimeModal = document.getElementById('wasteTimeModal');
+            
+            if (event.target === byeModal) {
+                byeModal.style.display = 'none';
+            }
+            if (event.target === wasteTimeModal) {
+                wasteTimeModal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
