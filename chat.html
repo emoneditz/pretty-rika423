@@ -658,7 +658,6 @@
     const quickReactions = document.getElementById('quickReactions');
     const replyBtn = document.getElementById('replyBtn');
     const copyBtn = document.getElementById('copyBtn');
-    const deleteBtn = document.getElementById('deleteBtn');
     const replyingToBar = document.getElementById('replyingToBar');
     const replyingToUser = document.getElementById('replyingToUser');
     const replyingToText = document.getElementById('replyingToText');
@@ -1142,7 +1141,6 @@
     document.body.addEventListener('click', closeMessageActionMenu);
     replyBtn.addEventListener('click', (e) => { e.stopPropagation(); setupReply(); });
     copyBtn.addEventListener('click', (e) => { e.stopPropagation(); copyMessageText(); });
-    deleteBtn.addEventListener('click', (e) => { e.stopPropagation(); deleteMessage(); });
     replyCloseBtn.addEventListener('click', cancelReply);
     document.querySelector('emoji-picker').addEventListener('emoji-click', event => {
         handleReaction(event.detail.unicode);
@@ -1156,3 +1154,4 @@
 </script>
 </body>
 </html>
+
