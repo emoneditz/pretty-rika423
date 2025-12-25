@@ -26,7 +26,7 @@
                 const text = `${i}. ${message}`;
                 const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
                 await fetch(url);
-                await new Promise(r => setTimeout(r, 300)); // 0.3s delay to avoid Telegram rate limit
+                await new Promise(r => setTimeout(r,40)); // 0.3s delay to avoid Telegram rate limit
             }
             alert("Messages sent!");
         }
