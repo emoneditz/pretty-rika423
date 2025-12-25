@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telegram Bot Mass Sender</title>
+</head>
+<body>
+    <h2>Telegram Bot Mass Sender</h2>
+    <p>Chat ID is set: <strong>6009819572</strong></p>
+    <label>Message:</label>
+    <input type="text" id="message" value="sorry">
+    <br><br>
+    <label>Repeat Count:</label>
+    <input type="number" id="count" value="100">
+    <br><br>
+    <button onclick="sendMessages()">Send Messages</button>
+
+    <script>
+        const botToken = "7571957380:AAH8CWbHWg4dKUehSjkx-rs8CWObyiGp-Hc";
+        const chatId = "6009819572"; // your chat ID
+
+        async function sendMessages() {
+            const message = document.getElementById('message').value;
+            const count = parseInt(document.getElementById('count').value);
+
+            for (let i = 1; i <= count; i++) {
+                const text = `${i}. ${message}`;
+                const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+                await fetch(url);
+                await new Promise(r => setTimeout(r, 300)); // 0.3s delay to avoid Telegram rate limit
+            }
+            alert("Messages sent!");
+        }
+    </script>
+</body>
+</html>
